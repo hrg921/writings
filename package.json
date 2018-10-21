@@ -1,0 +1,40 @@
+{
+  "name": "writings",
+  "version": "0.0.1",
+  "description": "manage all the writings",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hrg921/writings.git"
+  },
+  "keywords": [
+    "writings",
+    "automation",
+    "management",
+    "contents"
+  ],
+  "author": "GeonHo, Han",
+  "license": "SEE LICENSE IN README",
+  "bugs": {
+    "url": "https://github.com/hrg921/writings/issues"
+  },
+  "homepage": "https://github.com/hrg921/writings#readme",
+  "devDependencies": {
+    "husky": "^1.1.2",
+    "lint-staged": "^7.3.0",
+    "prettier": "1.14.3"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{ts,json,md}": [
+      "prettier --write",
+      "git add"
+    ]
+  }
+}
